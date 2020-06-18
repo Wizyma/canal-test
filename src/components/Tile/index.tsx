@@ -24,6 +24,7 @@ export default function Tile({
           style={{
             textAlign: 'center',
             fontWeight: 700,
+            maxWidth: 350,
           }}
         >
           {title}
