@@ -47,7 +47,7 @@ function ShowPage({ show }: { show: Show }) {
             </Card>
           </Grid>
           <Grid sm={24}>
-            <Collapse shadow title="Seasons" >
+            <Collapse shadow initialVisible={true} title="Seasons" >
               <Grid.Container gap={2}>
                 {show?.seasons?.map(({ poster_path, name, id }) => (
                   <Grid key={id} sm={6}>
