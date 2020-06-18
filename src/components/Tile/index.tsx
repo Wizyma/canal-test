@@ -22,10 +22,6 @@ export default function Tile({
       <Card.Content style={{ width: 'auto' }}>
         <Text
           style={{
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            width: 350,
             textAlign: 'center',
             fontWeight: 700,
           }}
