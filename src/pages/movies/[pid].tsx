@@ -25,6 +25,7 @@ function MoviePage({ movie }: { movie: Movie }) {
   const opts = {
     width: '550',
   };
+  
   return (
     <Grid.Container gap={2}>
       <Grid sm={24} justify='center'>

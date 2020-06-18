@@ -46,7 +46,11 @@ export default function MoviesPage() {
         </Card>
       </Grid>
       {data?.map(({ results }) => {
-        return results?.map(({ id, title, poster_path }) => {
+        return results?.map(({ id, title, poster_path, adult }) => {
+          if(adult) {
+            return null;
+          }
+          
           const push = getMovieRoute(id);
 
           return (
