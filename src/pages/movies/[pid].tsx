@@ -78,6 +78,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       params: 'append_to_response=videos'
     })) as AxiosResponse<Movie>;
 
+    if(!movie) {
+      return {
+        props: {
+          movie: null
+        }
+      }
+    }
+
     return {
       props: {
         movie,
