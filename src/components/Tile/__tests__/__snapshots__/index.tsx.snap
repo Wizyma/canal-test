@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should render the Tile component 1`] = `
+<DocumentFragment>
+  <div
+    class="jsx-2747747579 card "
+  >
+    <div
+      class="jsx-363961758 image "
+    >
+      <div
+        class="jsx-2292771821 skeleton"
+      />
+      <img
+        class="jsx-363961758 "
+        height="600"
+        src="https://image.tmdb.org/t/p/w500/nothing"
+        style="object-fit: cover;"
+        width="400"
+      />
+    </div>
+    <div
+      class="jsx-2956695818 content "
+      style="width: auto;"
+    >
+      <p
+        class="jsx-3390086683  "
+        style="text-align: center; font-weight: 700; max-width: 350px;"
+      >
+        Jest Test
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
