@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should render the Loading component 1`] = `
+<DocumentFragment>
+  <div
+    class="jsx-2070862285 item justify sm jsx-4216129763 "
+  >
+    <div
+      class="jsx-16278101 card "
+    >
+      <div
+        class="jsx-2956695818 content "
+      >
+        <div
+          class="jsx-3255440017 loading-container"
+        >
+          <span
+            class="jsx-3255440017 loading"
+          >
+            <i
+              class="jsx-3255440017"
+            />
+            <i
+              class="jsx-3255440017"
+            />
+            <i
+              class="jsx-3255440017"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
