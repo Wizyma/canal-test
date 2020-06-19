@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { resolve } = require('path');
+
 module.exports = {
   preset: 'ts-jest',
   roots: ["<rootDir>/src"],
@@ -26,5 +29,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '^constants/(.*)$': resolve(__dirname, './src/constants/$1'),
+    '^components/(.*)$': resolve(__dirname, './src/components/$1'),
   },
 };
