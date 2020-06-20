@@ -1,22 +1,18 @@
-import { ArrowLeftCircle } from '@zeit-ui/react-icons';
 import { GetStaticProps, GetStaticPaths } from 'next'
 import YouTube from 'react-youtube';
 import { Grid, Card, Text, Spacer } from '@zeit-ui/react';
-import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import type { AxiosResponse } from 'axios';
 
 import Fetcher from 'fetcher';
-import Loading from 'components/Loading'
+import Loading from 'components/Loading';
+import Header from 'components/Header';
 import type { Movie } from 'type/movies';
 import Tile from 'components/Tile';
 
 
 function MoviePage({ movie }: { movie: Movie }) {
   const router = useRouter();
-  const goBack = useCallback(() => {
-    router.back();
-  }, [router]);
   
   if(router.isFallback) {
     return <Loading />
@@ -29,9 +25,7 @@ function MoviePage({ movie }: { movie: Movie }) {
   return (
     <Grid.Container gap={2}>
       <Grid sm={24} justify='center'>
-        <Card onClick={goBack}>
-          <ArrowLeftCircle />
-        </Card>
+        <Header />
       </Grid>
       {movie && (
         <>

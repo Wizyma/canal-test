@@ -1,21 +1,17 @@
-import { ArrowLeftCircle } from '@zeit-ui/react-icons';
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { Grid, Card, Text, Collapse } from '@zeit-ui/react';
-import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import type { AxiosResponse } from 'axios';
 
 import Fetcher from 'fetcher';
-import Loading from 'components/Loading'
+import Loading from 'components/Loading';
+import Header from 'components/Header';
 import type { Show } from 'type/show';
 import Tile from 'components/Tile';
 
 
 function ShowPage({ show }: { show: Show }) {
   const router = useRouter();
-  const goBack = useCallback(() => {
-    router.back();
-  }, [router]);
   
   if(router.isFallback) {
     return <Loading />
@@ -24,9 +20,7 @@ function ShowPage({ show }: { show: Show }) {
   return (
     <Grid.Container gap={2}>
       <Grid sm={24} justify='center'>
-        <Card onClick={goBack}>
-          <ArrowLeftCircle />
-        </Card>
+        <Header />
       </Grid>
       {show && (
         <>

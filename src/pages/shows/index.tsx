@@ -1,11 +1,11 @@
-import { ArrowLeftCircle } from '@zeit-ui/react-icons';
-import { Grid, Card } from '@zeit-ui/react';
+import { Grid } from '@zeit-ui/react';
 import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import axios, { AxiosResponse } from 'axios';
 
 import Tile from 'components/Tile';
 import Loading from 'components/Loading';
+import Header from 'components/Header';
 import { useInfiniteScroll } from 'hooks/useInfiniteScroll';
 import { useInfiniteQuery } from 'hooks/useInfiniteQuery';
 import type { Shows } from 'type/show';
@@ -25,9 +25,6 @@ export default function ShowsPage() {
     promise: getShows,
   });
 
-  const goBack = useCallback(() => {
-    router.back();
-  }, [router]);
   const getMovieRoute = useCallback(
     (id: number) => {
       const push = () => router.push(`/shows/${id}`);
@@ -42,9 +39,7 @@ export default function ShowsPage() {
     <>
       <Grid.Container gap={2} justify="center">
         <Grid sm={21}>
-          <Card onClick={goBack}>
-            <ArrowLeftCircle />
-          </Card>
+          <Header />
         </Grid>
         {data?.map(({ results }) => {
           return results?.map(({ id, name, poster_path }) => {
